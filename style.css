@@ -1,0 +1,15 @@
+#bigcontainer{
+    margin-top: 50px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.square{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color:wheat;
+}
