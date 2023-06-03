@@ -1,14 +1,20 @@
 const bigcontainer = document.querySelector('#bigcontainer');
 
-function create_square_linex16()
+const btn = document.querySelector('#matrix');
+
+let x;
+
+
+
+function create_square_linex16(x)
 {
-    for ( let i = 0; i < 16; i++)
+    for ( let i = 0; i < x; i++)
     {
         const container = document.createElement('div');
         container.classList.add('container');
         bigcontainer.appendChild(container);
 
-        for (let j = 0; j < 16; j++)
+        for (let j = 0; j < x; j++)
         {
             const square = document.createElement('div');
             square.classList.add('square');
@@ -20,17 +26,22 @@ function create_square_linex16()
 }
 
 
-create_square_linex16();
+btn.addEventListener('click',()=>{
+    x = Number(prompt("give me a number"));
+
+    create_square_linex16(x);
 
 
-const squares = document.querySelectorAll('.square');
+    const squares = document.querySelectorAll('.square');
 
-squares.forEach(function(square) {
+    squares.forEach(function(square) {
 
-    square.addEventListener('mouseover',()=>{
-        square.style.backgroundColor = "red";
-        console.log('test');
-    
+        square.addEventListener('mouseover',()=>{
+            square.style.backgroundColor = "red";
+            console.log('test');
+        
+        });
     });
+
 });
 
